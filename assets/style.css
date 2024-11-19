@@ -1,0 +1,207 @@
+                /* --------- Universal reset selector ------------ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+                        /* -------- Body styles ----------- */
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%); 
+    height: 100vh;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+                    /* ------------- Containers styles -------------- */
+.container {
+    width: 90%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+    background-image: url("img/candado.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container__contenido {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.container__informacion {
+    flex: 1;
+    padding: 1rem;
+}
+
+                        /* ---------- Main Title style ---------- */
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    padding: 2rem;
+}
+
+.container__texto {
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container__texto-azul {
+    color: #1875E8;
+    display: block;
+}
+
+.container__campo {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin-bottom: 12px;
+    margin: 0 auto;
+    margin: 30px;
+    gap: 3rem;
+}
+
+.texto__parrafo {
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 10px;
+}
+
+.container__input {
+    width: 90px;
+    height: 50px;
+    border-radius: 16px;
+    background-color: #FFF;
+    border: none;
+    color: #535353;
+    padding: 1em;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    margin-left: 10px;
+}
+
+                    /* -----------  Buttons styles ------------ */
+
+.boton{
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #1875E8;
+    padding: 0.4em 0.6em;
+    border-radius: 16px;
+    width: 180px;
+    height: 50px;
+    box-shadow: 0px 0px 20px 0px rgba(24, 117, 232, 0.50);
+    cursor: pointer;
+}
+
+.container__contrasena {
+    width: 260px;
+    height: 50px;
+    border-radius: 16px;
+    background-color: #FFF;
+    border: none;
+    color: #1875E8;
+    margin:0 auto;
+    padding: 1em;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    letter-spacing: 0.08rem;
+}
+
+@media screen and (max-width: 846px) {
+
+    .container__campo {
+        gap: 1.2rem;
+        justify-content: flex-start;
+    }
+
+    .boton{
+        font-size: 1.2rem;
+        width: 150px;
+    }
+
+    .container__input {
+        margin-left: 6px;
+    }
+
+}
+
+@media screen and (max-width: 712px) {
+
+    .container__campo {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    .container {
+        background-image: url("img/candado.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+                    /* ----------- Media queries settings --------------- */
+
+@media screen and (max-width: 624px) {
+
+    .container__campo {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 2rem;
+        padding: 1em;
+    }
+
+    .container {
+        background-image: url("img/candado.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+}
