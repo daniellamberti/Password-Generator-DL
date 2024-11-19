@@ -1,7 +1,7 @@
 //  DOM Elements:
 
 const cantidad = document.getElementById("cantidad");
-let contrasena = document.getElementById("contrasena");
+const contrasena = document.getElementById("contrasena");
 const mainBtn = document.getElementById("generar");
 const resetearEl = document.getElementById("resetear");
 
@@ -42,6 +42,9 @@ const numbers = "0123456789";
 // generate passwords addEventListener btn:
 
 generar.addEventListener("click", function () {
+    if(cantidad.value === "") {
+        alert("Debe asignar un numero entre 8 y 20 caracteres para su contraseña")
+    } else {
     const password = generarContra();
     contrasena.value = password;
     contrasena.style.cursor = "pointer";
@@ -50,15 +53,14 @@ generar.addEventListener("click", function () {
         if ([...symbols].some(symbol => password.includes(symbol)) &&
             [...numbers].some(number => password.includes(number))) {
             alert("Su contraseña es fuerte. Puede copiarla o generar otra si lo prefiere");
-        }
-        else if ([...symbols].some(symbol => password.includes(symbol)) ||
-                [...numbers].some(number => password.includes(number))) {
+        } else if ([...symbols].some(symbol => password.includes(symbol)) ||
+            [...numbers].some(number => password.includes(number))) {
             alert("Su contraseña es promedio. Considere generar otra para mayor seguridad.");
-        }
-        else {
+        } else {
             alert("Su contraseña es débil. Se recomiendo generar una nueva.");
         }
     }, 500);
+    }
 });
 
 // copy password to clipboard addEventListener btn:
