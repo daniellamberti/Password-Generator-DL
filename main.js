@@ -79,8 +79,6 @@ contrasena.addEventListener("click", function() {
 });
 
 
-console.log(contrasena.value);
-
 //reset passwords addEventListener btn:
 
 resetear.addEventListener("click", function() {
