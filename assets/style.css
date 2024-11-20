@@ -146,6 +146,9 @@ h1 {
     font-family: 'Inter', sans-serif;
     text-align: center;
     letter-spacing: 0.08rem;
+
+              /* ----------- Media queries settings --------------- */
+
 }
 
 @media screen and (max-width: 846px) {
@@ -184,8 +187,6 @@ h1 {
         background-position: center;
     }
 }
-
-                    /* ----------- Media queries settings --------------- */
 
 @media screen and (max-width: 624px) {
 
