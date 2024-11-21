@@ -8,8 +8,8 @@ const resetearEl = document.getElementById("resetear");
 // Validate input for password length
 
 cantidad.addEventListener('input', () => {
-    const min = parseInt(cantidad.min, 10) || 8; // Default to 8 if min attribute is missing
-    const max = parseInt(cantidad.max, 10) || 20; // Default to 20 if max attribute is missing
+    const min = parseInt(cantidad.min, 10) || 8;
+    const max = parseInt(cantidad.max, 10) || 20;
     let value = parseInt(cantidad.value, 10);
 
     if (value < min) {
